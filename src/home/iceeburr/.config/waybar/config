@@ -1,0 +1,74 @@
+{
+    "layer": "top", 
+    "position": "top", 
+    "height": 40, 
+    "modules-left": ["hyprland/workspaces", "mpris"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["privacy", "tray", "wireplumber", "network", "battery", "clock"],
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": false,
+        "format": "{icon}",
+        "format-icons": {
+            "urgent": "",
+            "active": "",
+            "default": ""
+        }
+    },
+    "hyprland/window": {
+    	  "max-length": 60
+    },
+    "tray": {
+         "icon-size": 18,
+        "spacing": 10
+    },
+    "clock": {
+    },
+    "battery": {
+        "bat": "BAT0",
+        "states": {
+            "good": 80,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "network": {
+        "format-wifi": "{essid} ",
+        "format-ethernet": "Ethernet ",
+        "format-disconnected": "Disconnected ⚠"
+    },
+    "wireplumber": {
+        "scroll-step": 2,
+        "format": " {volume}% {icon}",
+        "format-muted": "",
+        "format-icons": [" ", " ", " ", " ", " "],
+        "tooltip-format": "{volume}% {icon}"
+    },
+	"mpris": {
+        "format": " {artist} - {title}",
+        "format-paused": "  {artist} - {title}",
+        "tooltip-format": " {title}",
+        "max-length": 40,
+        "interval": 1,
+        "ignored-players": ["firefox"]
+    },
+    "privacy": {
+		"icon-spacing": 4,
+		"icon-size": 16,
+		"transition-duration": 250,
+		"modules": [
+			{
+				"type": "screenshare",
+				"tooltip": true,
+				"tooltip-icon-size": 16
+			},
+			{
+				"type": "audio-in",
+				"tooltip": true,
+				"tooltip-icon-size": 16
+			}
+		]
+	}
+}
